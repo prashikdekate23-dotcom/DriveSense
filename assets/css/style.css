@@ -1,153 +1,310 @@
-/* ===========================
-   DriveSense Website Styles
-   Author: Prashik Dekate
-=========================== */
+/* =========================
+   RESET
+========================= */
 
-/* Reset default browser styles */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
-/* Color variables */
-
-:root {
-    --bg-color: #0B1120;
-    --card-color: #111827;
-    --primary: #04f714;
-    --secondary: #3B82F6;
-    --text: #FFFFFF;
-    --gray: #B0B8C4;
+body{
+    background:#0b1120;
+    color:white;
+    min-height:100vh;
 }
 
-/* Body */
+/* =========================
+   HEADER
+========================= */
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: var(--bg-color);
-    color: var(--text);
-}
-/* Navigation */
+header{
 
-nav {
+    height:80px;
 
-    display: flex;
+    background:#111827;
 
-    justify-content: space-between;
+    display:flex;
 
-    align-items: center;
+    justify-content:space-between;
 
-    padding: 20px 80px;
+    align-items:center;
 
-    background: rgba(17, 24, 39, 0.95);
+    padding:0 40px;
 
-    position: sticky;
-
-    top: 0;
+    border-bottom:2px solid #00d4ff;
 
 }
-.logo h2 {
 
-    color: var(--primary);
+.logo{
 
-    font-size: 40px;
+    font-size:30px;
 
-}
-nav ul {
+    font-weight:700;
 
-    display: flex;
-
-    list-style: none;
-
-    gap: 40px;
+    color:#00d4ff;
 
 }
-nav a {
 
-    color: white;
+#clock{
 
-    text-decoration: none;
+    font-size:22px;
 
-    font-size: 18px;
+    color:#00ff99;
 
-    transition: 0.3s;
-
-}
-nav a:hover {
-
-    color: var(--primary);
+    font-weight:600;
 
 }
-.hero {
 
-    height: 90vh;
+/* =========================
+   DASHBOARD
+========================= */
 
-    display: flex;
+.dashboard{
 
-    justify-content: center;
+    padding:30px;
 
-    align-items: center;
+    display:grid;
 
-    text-align: center;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 
-}
-.hero h1 {
-
-    font-size: 80px;
-
-    color: var(--primary);
+    gap:25px;
 
 }
-.hero h2 {
 
-    margin-top: 20px;
+/* =========================
+   CARD
+========================= */
 
-    font-size: 32px;
+.card{
 
-}
-.hero p {
+    background:#151d2f;
 
-    margin-top: 25px;
+    border-radius:20px;
 
-    color: var(--gray);
+    padding:25px;
 
-    font-size: 20px;
+    text-align:center;
 
-    line-height: 1.7;
+    box-shadow:0 0 20px rgba(0,212,255,.15);
 
-}
-.buttons {
-
-    margin-top: 40px;
+    transition:.3s;
 
 }
-button {
 
-    padding: 15px 35px;
+.card:hover{
 
-    margin: 10px;
+    transform:translateY(-6px);
 
-    border: none;
-
-    border-radius: 10px;
-
-    background: var(--primary);
-
-    color: white;
-
-    font-size: 18px;
-
-    cursor: pointer;
-
-    transition: 0.3s;
+    box-shadow:0 0 30px rgba(0,212,255,.45);
 
 }
-button:hover {
 
-    background: var(--secondary);
+.card h2{
 
-    transform: translateY(-3px);
+    color:#00d4ff;
+
+    margin-bottom:20px;
+
+    font-size:22px;
+
+}
+
+/* =========================
+   GAUGE
+========================= */
+
+.gauge{
+
+    width:180px;
+
+    height:180px;
+
+    margin:auto;
+
+    border:8px solid #00d4ff;
+
+    border-radius:50%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:0 0 25px #00d4ff;
+
+}
+
+.value{
+
+    font-size:52px;
+
+    font-weight:bold;
+
+}
+
+.gauge span{
+
+    color:#bdbdbd;
+
+}
+
+/* =========================
+   PROGRESS BAR
+========================= */
+
+.progress{
+
+    width:100%;
+
+    height:20px;
+
+    background:#333;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    margin:20px 0;
+
+}
+
+.progress div{
+
+    height:100%;
+
+    width:100%;
+
+    background:linear-gradient(90deg,#00ff88,#00d4ff);
+
+    transition:1s;
+
+}
+
+.red{
+
+    background:linear-gradient(90deg,#ff9800,#ff3b3b)!important;
+
+}
+
+/* =========================
+   BATTERY
+========================= */
+
+.battery{
+
+    font-size:42px;
+
+    color:#00ff99;
+
+    font-weight:bold;
+
+}
+
+/* =========================
+   STATUS
+========================= */
+
+.statusGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+
+}
+
+.status{
+
+    background:#1f2a44;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.active{
+
+    background:#00d4ff;
+
+    color:black;
+
+    box-shadow:0 0 15px #00d4ff;
+
+}
+
+/* =========================
+   WARNING
+========================= */
+
+#warning{
+
+    background:#166534;
+
+    padding:18px;
+
+    border-radius:10px;
+
+    font-weight:bold;
+
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    text-align:center;
+
+    padding:25px;
+
+    color:#9ca3af;
+
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+header{
+
+flex-direction:column;
+
+justify-content:center;
+
+gap:10px;
+
+height:auto;
+
+padding:20px;
+
+}
+
+.gauge{
+
+width:150px;
+
+height:150px;
+
+}
+
+.value{
+
+font-size:42px;
+
+}
 
 }

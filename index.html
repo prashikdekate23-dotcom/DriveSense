@@ -3,72 +3,189 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>DriveSense | Smart Automotive Dashboard</title>
+<title>DriveSense | Smart Automotive Dashboard</title>
 
-    <link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-    <!-- Navigation -->
+<header>
 
-    <nav>
+<div class="logo">
 
-        <div class="logo">
+🚗 DriveSense
 
-            <h2>DriveSense</h2>
+</div>
 
-        </div>
+<div id="clock">
 
-        <ul>
+00:00:00
 
-            <li><a href="#">Home</a></li>
+</div>
 
-            <li><a href="#">Features</a></li>
+</header>
 
-            <li><a href="#">Hardware</a></li>
+<main class="dashboard">
 
-            <li><a href="#">Gallery</a></li>
+<!-- SPEED -->
 
-            <li><a href="#">Contact</a></li>
+<section class="card">
 
-        </ul>
+<h2>Speed</h2>
 
-    </nav>
+<div class="gauge">
 
-    <!-- Hero Section -->
+<div id="speed" class="value">0</div>
 
-    <section class="hero">
+<span>km/h</span>
 
-        <div class="hero-content">
+</div>
 
-            <h1>DriveSense</h1>
+</section>
 
-            <h2>Smart Automotive Dashboard</h2>
+<!-- RPM -->
 
-            <p>
-                Designed and developed using STM32,
-                Embedded C and Automotive Sensors.
-            </p>
+<section class="card">
 
-            <div class="buttons">
+<h2>RPM</h2>
 
-                <button>Explore Project</button>
+<div class="gauge">
 
-                <button>GitHub Repository</button>
+<div id="rpm" class="value">900</div>
 
-            </div>
+<span>rpm</span>
 
-        </div>
+</div>
 
-    </section>
+</section>
 
-    <script src="assets/js/script.js"></script>
+<!-- FUEL -->
+
+<section class="card">
+
+<h2>Fuel Level</h2>
+
+<div class="progress">
+
+<div id="fuelBar"></div>
+
+</div>
+
+<p id="fuelText">100%</p>
+
+</section>
+
+<!-- TEMPERATURE -->
+
+<section class="card">
+
+<h2>Engine Temperature</h2>
+
+<div class="progress">
+
+<div id="tempBar" class="red"></div>
+
+</div>
+
+<p id="tempText">90 °C</p>
+
+</section>
+
+<!-- BATTERY -->
+
+<section class="card">
+
+<h2>Battery</h2>
+
+<div class="battery" id="battery">
+
+12.6 V
+
+</div>
+
+</section>
+
+<!-- ODOMETER -->
+
+<section class="card">
+
+<h2>Odometer</h2>
+
+<div class="battery" id="odometer">
+
+12548 km
+
+</div>
+
+</section>
+
+<!-- INDICATORS -->
+
+<section class="card">
+
+<h2>Vehicle Status</h2>
+
+<div class="statusGrid">
+
+<div class="status active" id="left">
+
+⬅ Left
+
+</div>
+
+<div class="status" id="right">
+
+Right ➡
+
+</div>
+
+<div class="status active" id="headlight">
+
+💡 Headlight
+
+</div>
+
+<div class="status" id="seatbelt">
+
+🪑 Seat Belt
+
+</div>
+
+</div>
+
+</section>
+
+<!-- WARNING -->
+
+<section class="card">
+
+<h2>System Warning</h2>
+
+<div id="warning">
+
+✅ All Systems Normal
+
+</div>
+
+</section>
+
+</main>
+
+<footer>
+
+Designed & Developed by <strong>Prashik Dekate</strong>
+
+</footer>
+
+<script src="assets/js/script.js"></script>
 
 </body>
 
